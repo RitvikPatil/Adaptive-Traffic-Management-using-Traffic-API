@@ -1,11 +1,10 @@
-# Microsoft Open Source Hackathon 2020
+# Adaptive Traffic Management using Traffic API 
 
+<h3> Problem Theme</h3>
+Design a Smart Traffic Management System for Quick Commute and Carbon Reduction
+<br><br>
 
-***TEAM: TECHNO PANDITS***
-
-**Problem Statement**
-
-*Smart Traffic Management System for Quick Commute and Carbon Reduction*
+<h3>The issue</h3>
 
 Traffic congestion is rising in cities around the world. Contributing factors include expanding urban population, aging infrastructure, inefficient and uncoordinated traffic signal timing and a lack of real-time data.
 
@@ -13,24 +12,24 @@ Advanced traffic management technologies such as adaptive traffic control and tr
 
 Create a solution for smart cities with mature traffic management.
 
+<br>
 
-
-
-
-**Idea**
+<h3>Idea</h3>
 
 We are aiming to solve the traffic congestion problem by optimising the signal timer durations. This will be done by setting the timers proportional to their respective road traffic density. 
 Do take a look at the Presentation Created by Us: CodeForTheFuture_TechnoPandits.pdf
 
 
 
-
-**Approach**
-* The first step is to find traffic flow on every side of a crossroad. This is done by fetching data from 'Traffic Flow' API. Here we have used [Azure Maps API](https://azure.microsoft.com/en-in/services/azure-maps/).  Azure Maps API is one of the leading traffic flow API with an accuracy over 96%. This traffic density data will be used in real-time to calculate the wait time for each signal.
+<br>
+<h3>Approach</h3>
+The first step is to find traffic flow on every side of a crossroad. This is done by fetching data from 'Traffic Flow' API. Here we have used [Azure Maps API](https://azure.microsoft.com/en-in/services/azure-maps/).  Azure Maps API is one of the leading traffic flow API with an accuracy over 96%. This traffic density data will be used in real-time to calculate the wait time for each signal.
 * Now that our model has the traffic distribution along the crossroad, the next step would be to find optimal traffic signal timings. We try to optimize signal timings by focusing more on **_equity_ over equality.** In simple words, the signal wait time would be indirectly proportional to the traffic flow on a side rather than having same wait time for all sides of the crossroad.
 So, for eg on a 4-way crossroad, if one of the roads has a greater traffic density, then, the signal wait time will be proportionally lower.
 * After finding optimal signal timings, the signal timers are set as per those timings.
 * The whole process is repeated after an interval of 2 min. This is done to achieve the **real time** aspect of our model.
+<br>
+
 
 ## Flowchart :-
 ![Flowchart](https://github.com/sanky2501/Microsoft-Hackthon/blob/master/Flowchart.jpg)
